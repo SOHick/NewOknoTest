@@ -58,18 +58,16 @@ public class MainWindow extends  JFrame
                 if ((e.getKeyCode() == KeyEvent.VK_S) && ((e.getModifiers() & KeyEvent.CTRL_MASK) != 0))
                 {
                     mainPanel.setText(myText.getText());
-                    Parser tp2 = new Parser("(?i)<a([^>]+)>(.+?)</a>");
-                    Parser tp3 = new Parser("(?<=^|)(?:\\w+@mail.ru)\\b");
+                    Parser tp3 = new Parser("((?<=^|)(?:\\w+@mail.ru))\\b");
                     String str = myText.getText();
-                    TextParser tp = new TextParser("((?<=|\\s)(?:\\w+@mail.ru))\\b");
-                    String res = tp.replace(str, (mr)->{
-                        String r = "<a href =" + "\"" + mr.group(1) + "\">" + mr.group(1) + "</a>";
+                    String result = tp3.replace(str,(matchResult) ->
+                    {
+                        String r = "<a href =" + "\"" + matchResult.group(1) + "\">" + matchResult.group(1) + "</a>";
                         return r;
                     });
 
-                    mainPanel.setText(res);
+                    mainPanel.setText(result);
                     mainPanel.repaint();
-
                 }
             }
         });
