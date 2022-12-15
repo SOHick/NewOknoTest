@@ -75,7 +75,7 @@ public class MainWindow extends  JFrame
                 {
 
                     String str = mainPanel.getText();
-                    Parser tp3 = new Parser("(?<=^|)((?:\\w+@mail.ru)|(?:www.\\w+.ru))\\b");
+                    Parser tp3 = new Parser("(?<=^|)((?:\\w+@mail.ru)|(?:www.\\w+.ru)|(?:\\w+.\\w+.com)|(?:\\w+.ru)|(?:\\w+.com)|(?:\\w+.\\w+.org)|(?:\\w+.\\w+.net))\\b");
                     str = tp3.replace(str,(matchResult) ->
                     {
 
@@ -88,6 +88,7 @@ public class MainWindow extends  JFrame
                     str = tp.replace(str,(matchResult)->{
                         return "<a href =" + "\"" + matchResult.group(1) + "\">" + matchResult.group(1) + "</a>" ;
                     });
+//
                     mainPanel.setText(str);
                     mainPanel.repaint();
                 }
