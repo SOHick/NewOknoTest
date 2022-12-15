@@ -57,16 +57,38 @@ public class MainWindow extends  JFrame
             public void keyPressed(KeyEvent e) {
                 if ((e.getKeyCode() == KeyEvent.VK_S) && ((e.getModifiers() & KeyEvent.CTRL_MASK) != 0))
                 {
-                    mainPanel.setText(myText.getText());
-                    Parser tp3 = new Parser("((?<=^|)(?:\\w+@mail.ru))\\b");
-                    String str = myText.getText();
-                    String result = tp3.replace(str,(matchResult) ->
-                    {
-                        String r = "<a href =" + "\"" + matchResult.group(1) + "\">" + matchResult.group(1) + "</a>";
-                        return r;
-                    });
 
-                    mainPanel.setText(result);
+                    mainPanel.setText(myText.getText());
+
+                    String str = myText.getText();
+                    String pattern1 = ">";
+                    TextParser tp1 = new TextParser(pattern1);
+                    str = tp1.replace(str, "&gt;");
+
+                    String pattern2 = "<";
+                    TextParser tp2 = new TextParser(pattern2);
+                    str = tp2.replace(str,"&lt;");
+                    mainPanel.setText(str);
+                    mainPanel.repaint();
+                }
+                if((e.getKeyCode() == KeyEvent.VK_D) && ((e.getModifiers() & KeyEvent.CTRL_MASK) != 0))
+                {
+
+                    String str = mainPanel.getText();
+                    Parser tp3 = new Parser("(?<=^|)((?:\\w+@mail.ru)|(?:www.\\w+.ru))\\b");
+                    str = tp3.replace(str,(matchResult) ->
+                    {
+
+                        String  r = "<a href =" + "\"" + matchResult.group(1) + "\">" + matchResult.group(1) + "</a>";
+                        return r;
+
+                    });
+                    String pattern = "s*(?i)hrefs*=s*('([^']*')|'[^']*'|([^'>s]+))";
+                    TextParser tp = new TextParser(pattern);
+                    str = tp.replace(str,(matchResult)->{
+                        return "<a href =" + "\"" + matchResult.group(1) + "\">" + matchResult.group(1) + "</a>" ;
+                    });
+                    mainPanel.setText(str);
                     mainPanel.repaint();
                 }
             }

@@ -22,8 +22,7 @@ public class MyText
             "<li class=\"toclevel-1 tocsection-12\"><a href=\"#См._также\"><span class=\"tocnumber\">6</span> <span class=\"toctext\">См. также</span></a></li>\n" +
             "<li class=\"toclevel-1 tocsection-13\"><a href=\"#Примечания\"><span class=\"tocnumber\">7</span> <span class=\"toctext\">Примечания</span></a></li>\n" +
             "<li class=\"toclevel-1 tocsection-14\"><a href=\"#Литература\"><span class=\"tocnumber\">8</span> <span class=\"toctext\">Литература</span></a></li>\n" +
-            "</ul>\n" +
-            "</div> sadas@mail.ru" ;
+            "</ul>" + "</div>sadas@mail.ru"+" sadasdas"+"www.gruppa22.ru" ;
     String text = "<a href=\"/www.gruppa.ru\">Ссылка 1</a>asdasdas<a href=\"/www.gruppa22.ru\">Ссылка 2</a> тeкcт дo ccылки 1<a href='http://www.j4web.ru'>тeкcт ccылки</a>wewsdsd <a class=\"ph-desc svelte-6ia8p0\" aria-label=\"MAIL@mail.ru\">MAIL@mail.ru</a> sadas";
     public  String getText()
 
