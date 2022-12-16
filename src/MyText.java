@@ -23,8 +23,13 @@ public class MyText
             "            \"<li class=\\\"toclevel-1 tocsection-13\\\"><a href=\\\"#Примечания\\\"><span class=\\\"tocnumber\\\">7</span> <span class=\\\"toctext\\\">Примечания</span></a></li>\\n\" +\n" +
             "            \"<li class=\\\"toclevel-1 tocsection-14\\\"><a href=\\\"#Литература\\\"><span class=\\\"tocnumber\\\">8</span> <span class=\\\"toctext\\\">Литература</span></a></li>\\n\" +\n" +
             "            \"</ul>\" + \"</div>sadas@mail.ru\"+\" sadasdas\"+\"www.gruppa22.ru\" ;https://regex101.com/ <link rel=\"preconnect\" href=\"https://fonts.googleapis.com\"> https://ya.ru/ view-source:https://vk.com/audios171920587?section=all  href=\"//upload.wikimedia.org\"/>";
-    String text2 = "\"<div id=\\\"toc\\\" class=\\\"toc\\\" role=\\\"navigation\\\" aria-labelledby=\\\"mw-toc-heading\\\"><input type=\\\"checkbox\\\" role=\\\"button\\\" id=\\\"toctogglecheckbox\\\" class=\\\"toctogglecheckbox\\\" style=\\\"display:none\\\" /><div class=\\\"toctitle\\\" lang=\\&quot ;ru\\\" dir=\\\"ltr\\\"><h2 id=\\\"mw-toc-heading\\\">Содержание</h2><span = \"</ul>\" + \"</div>sadas@mail.ru\"+\" sadasdas\"+\"www.gruppa22.ru\" ;https://regex101.com/ <link rel=\"preconnect\" \"https://fonts.googleapis.com\"> https://ya.ru/ view-source:https://vk.com/audios171920587?section=all <link rel=\"preconnect\" \"//\n" +
-            ">upload.wikimedia.org\"/>https://cdn.jsdelivr.net/npm/bootstrap@4.5.3";
+    String text2 = "\\\"<div id=\\\\\\\"toc\\\\\\\" class=\\\\\\\"toc\\\\\\\" role=\\\\\\\"navigation\\\\\\\" aria-labelledby=\\\\\\\"mw-toc-heading\\\\\\\"><input type=\\\\\\\"checkbox\\\\\\\" role=\\\\\\\"button\\\\\\\" id=\\\\\\\"toctogglecheckbox\\\\\\\" class=\\\\\\\"toctogglecheckbox\\\\\\\" style=\\\\\\\"display:none\\\\\\\" /><div class=\\\\\\\"toctitle\\\\\\\" lang=\\\\&quot ;ru\\\\\\\" dir=\\\\\\\"ltr\\\\\\\"><h2 id=\\\\\\\"mw-toc-heading\\\\\\\">Содержание</h2><span = \\\"</ul>\\\" + \\\"</div>sadas@mail.ru\\\"+\\\" sadasdas\\\"+\\\"www.gruppa22.ru\\\" ;https://regex101.com/ <link rel=\\\"preconnect\\\" \\\"https://fonts.googleapis.com\\\"> https://ya.ru/ view-source:https://vk.com/audios171920587?section=all <link rel=\\\"preconnect\\\" \\\"//\\n\" +\n" +
+            "            \">upload.wikimedia.org\\\"/>https://cdn.jsdelivr.net/npm/bootstrap@4.5.3\n" +
+            "upload.wikimedia.org\\\"/>http://cdn.jsdelivr.net/npm/bootstrap@4.5.3\n" +
+            "</script><link rel=\"preload\" href=\"https://i.ytimg.com/generate_204\" as=\"fetch\"><link as=\"script\" rel=\"prel\n" +
+            "c=\"https://www.youtube.com/s/desktop/b1ec2f4b/jsbin/network.vflset/network.js\" nonce=\"vnckckRaw\n" +
+            " href=\"https://www.youtube.com/s/desktop/b1ec2f4b/img/favicon.ico\" f=\"android-app://com.google.android.youtube/http/www.youtube.com/\"><link\n" +
+            "r\" href=\"https://plus.google.com/115229808208707341778\"><link rel=\"alternate\"  ";
     public  String getText()
 
     {

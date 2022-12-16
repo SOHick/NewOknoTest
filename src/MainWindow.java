@@ -75,7 +75,7 @@ public class MainWindow extends  JFrame
                 {
 
                     String str = mainPanel.getText();
-                    Parser tp3 = new Parser("(?<=^|)((?:\\w+@mail.ru)|(?:www.\\w+.ru)|(?:\\w+.\\w+.com)|(?:\\w+.ru)|(?:\\w+.com)|(?:\\w+.\\w+.org)|(?:\\w+.\\w+.net))\\b");
+                    Parser tp3 = new Parser("(?<=^|)((?:\\w+@mail.ru)|(?:www.\\w+.ru)|(?:((https)|(http)):\\/\\/\\w+.\\w+.com)|(?:\\w+.ru)|(?:((https)|(http)):\\/\\/\\w+.com)|(?:\\w+.\\w+.org)|(?:((https)|(http)):\\/\\/\\w+.\\w+.net)|(?:www.\\w+.com))\\b");
                     str = tp3.replace(str,(matchResult) ->
                     {
 
